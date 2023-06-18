@@ -1,0 +1,30 @@
+{% extends "../template/_layout.html" %}
+<!--  -->
+{% block css %}
+<link rel="stylesheet" href="/css/board/list.css" />
+{% endblock %}
+<!--  -->
+{% block content %}
+<h2>리스트 페이지</h2>
+<table>
+  <thead>
+    <tr>
+      <th>번호</th>
+      <th>제목</th>
+      <th>작성자</th>
+    </tr>
+  </thead>
+  {% for item in list %}
+  <tbody>
+    <tr>
+      <td>{{loop.index}}</td>
+      <td>
+        <a href="/board/view?index={{loop.index}}"> {{item.subject}} </a>
+      </td>
+      <td>{{item.username}}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+<a href="/board/write" id="write_btn">글쓰기</a>
+{% endblock %}

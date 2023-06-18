@@ -1,0 +1,17 @@
+{% extends "../template/_layout.html" %} {% block content %}
+<h2>작성 페이지</h2>
+<form method="post" action="/board/write">
+  <ul>
+    <li>제목 : <input type="text" name="subject" /></li>
+    <input type="hidden" name="username" value="{{user.username}}" />
+    <input type="hidden" name="userid" value="{{user.userid}}" />
+    <li>작성자 : {{user.username}}</li>
+    <li>
+      본문 :
+      <textarea name="content" id="" cols="30" rows="10"></textarea>
+    </li>
+  </ul>
+  <br/>
+  <input type="submit" style="font-size: larger;" value="글쓰기" />
+</form>
+{% endblock %}

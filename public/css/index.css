@@ -1,0 +1,9 @@
+#content > h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+#content > ul > li {
+  font-size: 23px;
+  margin-bottom: 10px;
+}

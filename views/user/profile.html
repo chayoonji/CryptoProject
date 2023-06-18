@@ -1,0 +1,17 @@
+{% extends "../template/_layout.html" %}
+<!--  -->
+{% block css %}
+<link rel="stylesheet" href="../../public/css/profile.css" />
+{% endblock %}
+<!--  -->
+{% block content %}
+<div id="content">
+  <ul>
+    <li style="font-size: larger;">ID : {{user.userid}}</li> <br/>
+    <li style="font-size: larger;">PW : {{user.userpw}}</li> <br/>
+    <li style="font-size: larger;">NAME : {{user.username}}</li> <br/>
+  </ul>
+</div>
+<br/>
+<button type="submit" style="font-size: larger"><a href="/user/quit">회원탈퇴</a></button>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "../template/_layout.html" %}
+<!--  -->
+{% block css %}
+<link rel="stylesheet" href="/css/board/update.css" />
+{% endblock %}
+<!--  -->
+{% block content %}
+<h2>수정 페이지</h2>
+
+<form method="post" action="/board/update">
+  <input type="hidden" name="index" value="{{index}}" />
+  <ul id="title">
+    <li>
+      제목 : <input type="text" name="subject" value="{{data.subject}}" />
+    </li>
+    <li>
+      작성자 : <input type="text" name="username" value="{{data.username}}" />
+    </li>
+    본문 :
+  </ul>
+  <textarea name="content" id="" cols="30" rows="10">
+        {{data.content}}
+    </textarea
+  >
+  <input type="hidden" name="userid" value="{{data.userid}}" />
+  <div id="btn_container">
+    <a href="/board/list">목록</a>
+    <input type="submit" value="수정하기" id="udt_btn" />
+  </div>
+</form>
+{% endblock %}

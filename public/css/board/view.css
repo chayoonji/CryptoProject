@@ -1,0 +1,45 @@
+h2 {
+  margin-bottom: 15px;
+}
+
+#title {
+  border-top: 1px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  height: 30px;
+  align-items: center;
+  font-size: 23px;
+}
+
+#content_box {
+  width: 600px;
+  border-bottom: 1px solid black;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+#button_container {
+  display: flex;
+  justify-content: right;
+  width: 600px;
+  margin-top: 10px;
+}
+
+#button_container > * {
+  margin-left: 10px;
+  border: 1px solid black;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#button_container > form > input {
+  border: none;
+  background-color: #fff;
+  font-size: 18px;
+}
